@@ -11,23 +11,22 @@
                             <i class="pull-left fa fa-home"></i>
                             <div class="media-body">
                                 <strong>Address:</strong><br>
-                                21 rue du départ 75015 Paris
+                                17 rue des petits papiers - Paris
                             </div>
                         </div>
                         <div class="media">
                             <i class="pull-left fa fa-phone"></i>
                             <div class="media-body">
                                 <strong>Telephone:</strong><br>
-                                (012) 345-7689
+                                01 02 03 04 05
                             </div>
                         </div>
-
                         <div class="contact-details">
                             <p> Nous sommes à votre disposition tous les jours, de 10h à 19h </p>
                         </div>
                         <div class="media">
                             <div class="media-body">
-                                <strong>Customer Service:</strong><br>
+                                <strong>Service client:</strong><br>
                                 <a href="mailto:contact@funup.fr">contact@funup.fr</a>
                             </div>
                         </div>
@@ -61,27 +60,8 @@
                     <button type="submit" class="btn-black">
                         Envoyer un message
                     </button>
-                    <?php
-                    if (isset($_POST['text'])) {
-                        $entete  = 'MIME-Version: 1.0' . "\r\n";
-                        $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-                        $entete .= 'From: ' . $_POST['email'] . "\r\n";
-
-                        $message = '<h1>Message envoyé depuis la page Contact de funup.fr</h1>
-        <p><b>Nom : </b>' . $_POST['name'] . '<br>
-        <b>Email : </b>' . $_POST['email'] . '<br>
-        <b>Message : </b>' . $_POST['text'] . '</p>';
-
-                        $retour = mail('laetitiaschreiner@icloud.com', 'Envoi depuis page Contact', $message, $entete);
-                        if ($retour) {
-                            echo '<p>Votre message a bien été envoyé.</p>';
-                        }
-                    }
-                    ?>
                 </form>
-
             </aside>
-
             <div class="clearfix"></div>
             <div class="col-md-12">
                 <div class="google-map ">
@@ -92,14 +72,7 @@
         </div>
     </div>
 </div>
-
 <div class="clearfix space20"></div>
-
-<!-- FOOTER -->
-<?php include('footer.php') ?>
-<div id="backtotop"><i class="fa fa-chevron-up"></i></div>
-
-
 
 <!-- Javascript -->
 <script src="js/jquery.js"></script>

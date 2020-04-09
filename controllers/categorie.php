@@ -1,4 +1,5 @@
 
+<!-- TRI DES PRODUITS -->
 <?php
 $order = ' ';
 $choice = ' ';
@@ -18,7 +19,7 @@ if (isset($_POST['option'])) {
 } else {
     $order = " ORDER BY Id ASC";
 }
-
+//récupération des Produits selon la catégorie
 $query = 'SELECT * FROM Produit WHERE Cat_Id=' . $_GET['Id'] . $order;
 $resultSet = $pdo->query($query);
 $prods = $resultSet->fetchAll();

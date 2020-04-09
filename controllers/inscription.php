@@ -1,4 +1,5 @@
 <?php
+//création d'un compte utilisateur
 
 if (isset($_POST['ajouter'])) {
 	$query =

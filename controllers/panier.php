@@ -1,4 +1,5 @@
 <?php
+//suppresssion d'un article du panier 
 if (isset($_GET['del'])) {
     supprimerArticle($_GET['del']);
 }

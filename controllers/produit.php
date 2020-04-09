@@ -33,11 +33,6 @@ $resultSet = $pdo->prepare($query);
 $resultSet->execute([$_GET['id']]);
 $images = $resultSet->fetchAll();
 
-$query = "SELECT * FROM Images WHERE Produit_Id=?";
-$resultSet = $pdo->prepare($query);
-$resultSet->execute([$_GET['id']]);
-$images = $resultSet->fetchAll();
-
 $query = "SELECT * FROM Produit WHERE Cat_Id=?";
 $resultSet = $pdo->prepare($query);
 $resultSet->execute([$produit['Cat_Id']]);
