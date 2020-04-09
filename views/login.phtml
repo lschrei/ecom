@@ -1,0 +1,63 @@
+<?php
+
+if (isset($_POST['login'])) {
+
+    $query = 'SELECT * FROM User WHERE Email=? AND Pass=?';
+    $resultSet = $pdo->prepare($query);
+    $resultSet->execute([$_POST['Email'], $_POST['Pass']]);
+    $user = $resultSet->fetch();
+
+    if (isset($user['Id'])) {
+        $_SESSION['user'] = $user['Nom'];
+        $_SESSION['user_id'] = $user['Id'];
+        header('location:index.php');
+    } else {
+        header('location:login.php');;
+    }
+}
+
+?>
+
+
+<div class="space10"></div>
+
+<!-- MY ACCOUNT -->
+<div class="account-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <!-- HTML -->
+                <div id="account-id">
+                    <h4 class="account-title"><span class="fa fa-chevron-right"></span>Connexion</h4>
+                    <div class="account-form">
+                        <form class="form-login" method="POST">
+                            <ul class="form-list row">
+
+
+
+                                <li class="col-md-12 col-sm-12">
+                                    <label>Adresse mail <em>*</em></label>
+                                    <input required type="email" class="input-text" name='Email'>
+                                </li>
+                                <li class="col-md-12 col-sm-12">
+                                    <label>Mot de passe <em>*</em></label>
+                                    <input required type="password" class="input-text" name='Pass'>
+                                </li>
+
+
+                            </ul>
+                            <div class="buttons-set">
+                                <button class="btn-black" type="submit" name="login"><span>Connexion</span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<div class="clearfix space20"></div>
+
+
