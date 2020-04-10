@@ -24,7 +24,7 @@
                                 <td><a href="<?= $address ?>panier?del=<?php echo $_SESSION['panier']['idProduit'][$i] ?>"><i class="fa fa-trash-o"></i></a></td>
                                 <td><img src="<?php echo $tempproduit['Image']; ?>" class="img-responsive" alt="" /></td>
                                 <td>
-                                    <h4><a href="./single-product.html"><?php echo $_SESSION['panier']['libelleProduit'][$i] ?></a></h4>
+                                    <h4><a href="<?= $address ?>produit"><?php echo $_SESSION['panier']['libelleProduit'][$i] ?></a></h4>
                                 </td>
                                 <td><?php echo compterArticles(); ?></td>
                                 <!--mettre ici la qte-->

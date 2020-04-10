@@ -24,7 +24,7 @@
 
                             <?php foreach ($images as $image) : ?>
                                 <div class="item">
-                                    <img src="<?php echo $image['Url'] ?>" alt="">
+                                    <img src="<?php echo $image['Url'] ?>" alt="<?php echo $image['Titre'] ?>">
                                     <a href="<?php echo $image['Url'] ?>" rel="prettyPhoto[gallery2]" title="Product" class="caption-link"><i class="fa fa-arrows-alt"></i></a>
                                 </div>
                             <?php endforeach; ?>
@@ -54,9 +54,9 @@
                                 </div>
                                 <div class="ps-price"><?php echo $produit['Prix'] ?>€</div>
                             </div>
-                            <p>Nam placerat sem lacus, ut vestibulum enim pulvinar vitae. Sed sodales, tortor et auctor volutpat, nisl est sollicex, nec sollicitudin risus odio mollis ligula. Suspendisse eget augue purus. Proin a mauris ac arcu volutpat mattis ac eu odio. Fusce at porttitor orci, nec accumsan nunc. Quisque tempor massa turpis, a congue mauris fermentum in. Vivamus molestie ac elit nec semper. Aenean dolor ipsum, aliquam vitae mi iaculis, congue finibus magna.</p>
+                            <p><?php echo $produit['Description'] ?></p>
                             <div class="ps-stock">
-                                Available: <a href="#">In Stock</a>
+                                Disponibilité: <a href="#">En stock</a>
                             </div>
                             <div class="sep"></div>
                         </div>

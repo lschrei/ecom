@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Funup cadeaux et decorations pour les fêtes</title>
+    <title>Funup</title>
 
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,12 +57,11 @@
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
                             <div class="tb_left pull-left">
-                                <p>Vous êtes au bon endroit !</p>
+                                <p>Tout pour votre iPhone !</p>
                             </div>
                             <div class="tb_center pull-left">
                                 <ul>
-                                    <li><i class="fa fa-phone"></i> Hotline: <a href="#">(+800) 2307 2509 8988</a></li>
-                                    <li><i class="fa fa-envelope-o"></i> <a href="#">support@funup.fr</a></li>
+                                    <li><i class="fa fa-envelope-o"></i> <a href="<?= $address ?>contact">support@funup.fr</a></li>
                                 </ul>
                             </div>
                             <div class="tb_right pull-right">
@@ -88,13 +87,12 @@
                                             <div class="tbr-info">
                                                 <span>Mon Compte<i class="fa fa-caret-down"></i></span>
                                                 <div class="tbr-inner">
-                                                    <a href="#">Mes commandes</a>
-                                                    <a href="#">Mes informations</a>
+                                                    <!--to do--> <a href="#">Mes commandes</a>
+                                                    <!--to do--> <a href="#">Mes informations</a>
                                                     <a href="<?= $address ?>logout">Déconnexion</a>
                                                 </div>
                                             </div>
                                         </li>
-
                                     <?php } ?>
                                 </ul>
                             </div>
@@ -117,7 +115,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <!-- Logo -->
-                            <a class="navbar-brand" href="./index.php"><img src="images/basic/logofunup.png" class="img-responsive" alt="" /></a>
+                            <a class="navbar-brand" href="<?= $address ?>index"><img src="images/basic/logofunup.png" class="img-responsive" alt="" /></a>
                         </div>
                         <!-- Cart & Search -->
                         <div class="header-xtra pull-right">
@@ -138,7 +136,7 @@
                                         <div class="ci-item">
                                             <img src="<?php echo $tempproduit['Image']; ?>" width="80" alt="" />
                                             <div class="ci-item-info">
-                                                <h5><a href="./single-product.html"><?php echo $_SESSION['panier']['libelleProduit'][$i] ?></a></h5>
+                                                <h5><a href="<?= $address ?>produit"><?php echo $_SESSION['panier']['libelleProduit'][$i] ?></a></h5>
                                                 <p><?php echo $_SESSION['panier']['qteProduit'][$i] ?> x <?php echo $_SESSION['panier']['prixProduit'][$i] ?> €</p>
                                                 <div class="ci-edit">
                                                     <a href="#" class="edit fa fa-edit"></a>
@@ -146,19 +144,13 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     <?php } ?>
                                     <div class="ci-total">Total:<?php echo MontantGlobal(); ?>€</div>
                                     <div class="cart-btn">
                                         <a href="<?= $address ?>panier">Mon panier</a>
-
                                     </div>
                                 </div>
-
                             </div>
-
-
-
                             <div class="topsearch">
                                 <span>
                                     <i class="fa fa-search"></i>
@@ -173,9 +165,7 @@
 
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="./index.php">Accueil</a></li>
-
-
+                                <li><a href="<?= $address ?>index">Accueil</a></li>
 
                                 <?php
                                 $query = 'SELECT * FROM Categories';
@@ -191,12 +181,9 @@
                                 <?php endforeach; ?>
                                 <li class="dropdown">
                                     <a href="<?= $address ?>contact">Contact</a>
-
                                 </li>
                             </ul>
-
                         </div>
-
                     </div>
                 </div>
             </nav>

@@ -10,9 +10,9 @@ if (isset($_POST['login'])) {
     if (isset($user['Id'])) {
         $_SESSION['user'] = $user['Nom'];
         $_SESSION['user_id'] = $user['Id'];
-        header('location:index.php');
+        header('location:index');
     } else {
-        header('location:login.php');;
+        header('location:login');;
     }
 }
 
